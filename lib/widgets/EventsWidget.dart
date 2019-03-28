@@ -85,7 +85,7 @@ class EventsState extends State<EventsWidget> {
   Widget getDateHeaderWidget(String date){
     return Container(
       margin: const EdgeInsets.only(
-          left: 16.0, top: 6.0, right: 16.0, bottom: 6.0),
+          left: 32.0, top: 6.0, right: 16.0, bottom: 6.0),
       child: Text(
           new DateFormat.yMMMd().format(DateTime.parse(date)),
           style: new TextStyle(fontSize: 16.0, color: Theme.Colors.red),
@@ -103,6 +103,9 @@ class EventsState extends State<EventsWidget> {
   }
 
   Widget getMatchItemWidget(FootballMatch match) {
+
+    final score = match.match_hometeam_score + " - " + match.match_awayteam_score;
+
     return Container(
         margin: const EdgeInsets.only(
             left: 16.0, top: 6.0, right: 16.0, bottom: 6.0),
@@ -115,7 +118,7 @@ class EventsState extends State<EventsWidget> {
         child: Container(
             child: Padding(
                 padding: const EdgeInsets.only(
-                    left: 8.0, top: 10.0, right: 8.0, bottom: 10.0),
+                    left: 10.0, top: 8.0, right: 10.0, bottom: 12.0),
                 child: Column(
                     children: <Widget>[
                       Row(
@@ -136,28 +139,35 @@ class EventsState extends State<EventsWidget> {
                       ),
 
                       Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
-                            Text(
+                            new Flexible(child: Container(
+                              alignment: Alignment.centerRight,
+                              width: double.infinity,
+                              child: Text(
                               match.match_hometeam_name,
-                              style: new TextStyle(fontSize: 15.0),
-                            ),
-                            Text(
-                              match.match_hometeam_score,
-                              style: new TextStyle(fontSize: 15.0),
-                            ),
-                            Text(
-                              " - ",
-                              style: new TextStyle(fontSize: 15.0),
-                            ),
-                            Text(
-                              match.match_awayteam_score,
-                              style: new TextStyle(fontSize: 15.0),
-                            ),
-                            Text(
-                              match.match_awayteam_name,
-                              style: new TextStyle(fontSize: 15.0),
-                            ),
+                              style: new TextStyle(fontSize: 16.0),
+                            ),), flex: 1),
+                            new Flexible(
+                              child: Container(
+                                alignment: Alignment.center,
+                                width: 60.0,
+                                child: Text(
+                                  score,
+                                  style: new TextStyle(color: Theme.Colors.red, fontSize: 17.0),
+                                ),
+                              ),
+                              flex: 1),
+                            new Flexible(
+                                child: Container(
+                                  width: double.infinity,
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    match.match_awayteam_name,
+                                    style: new TextStyle(fontSize: 16.0),
+                                  ),
+                                ),
+                                flex: 1),
                           ]
                       )
 
