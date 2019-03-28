@@ -11,6 +11,11 @@ This project contains the basic features that are required to build an amazing F
 1. Standings
 2. Matches
 
+## Features
+BottomNavigationBar
+Send data to a new screen
+https://flutter.dev/docs/cookbook/navigation/passing-data
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
