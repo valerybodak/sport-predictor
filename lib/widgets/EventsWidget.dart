@@ -84,50 +84,13 @@ class EventsState extends State<EventsWidget> {
 
   Widget getDateHeaderWidget(String date){
     return Container(
-      color: const Color(0xffD0D0D0),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 16.0, top: 4.0, bottom: 4.0),
-        child: Text(
+      margin: const EdgeInsets.only(
+          left: 16.0, top: 6.0, right: 16.0, bottom: 6.0),
+      child: Text(
           new DateFormat.yMMMd().format(DateTime.parse(date)),
-          style: new TextStyle(fontSize: 15.0, color: Theme.Colors.red),
+          style: new TextStyle(fontSize: 16.0, color: Theme.Colors.red),
         ),
-      ),
     );
-  }
-
-  Widget getTeamScoreWidget(String teamName, String score){
-    return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Text(
-            teamName,
-            style: new TextStyle(fontSize: 15.0),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 6.0),
-            child: Text(
-              score,
-              style: new TextStyle(fontSize: 15.0),
-            ),
-          ),
-        ]
-    );
-  }
-
-  Widget getDividerWidget(MatchItem item){
-    if(item.isLastForDate){
-      return Container(
-        height: 0.0,
-      );
-    }else {
-      return Padding(
-          padding: const EdgeInsets.only(top: 8.0),
-          child: Container(
-            height: 1.0,
-            color: const Color(0xffD0D0D0),
-          )
-      );
-    }
   }
 
   Widget getErrorWidget(String error){
