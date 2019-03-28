@@ -159,15 +159,15 @@ class EventsState extends State<EventsWidget> {
                               ),
                               flex: 1),
                             new Flexible(
-                                child: Container(
-                                  width: double.infinity,
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    match.match_awayteam_name,
-                                    style: new TextStyle(fontSize: 16.0),
-                                  ),
+                              child: Container(
+                                width: double.infinity,
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  match.match_awayteam_name,
+                                  style: new TextStyle(fontSize: 16.0),
                                 ),
-                                flex: 1),
+                              ),
+                              flex: 1),
                           ]
                       )
 
