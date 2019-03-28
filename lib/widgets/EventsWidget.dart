@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:sport_predictor/blocks/events_bloc.dart';
 import 'package:sport_predictor/model/EventsResponse.dart';
 import 'package:sport_predictor/model/FootballMatch.dart';
+import 'package:sport_predictor/Theme.dart' as Theme;
 
 class EventsWidget extends StatefulWidget {
   final String leagueId;
@@ -35,7 +36,10 @@ class EventsState extends State<EventsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return getListViewEvents();
+    return Container(
+      decoration: new BoxDecoration(color: Theme.Colors.lightGrey),
+      child: getListViewEvents(),
+    );
   }
 
   Widget getProgressIndicator() {
@@ -69,19 +73,7 @@ class EventsState extends State<EventsWidget> {
                   if (item is DateItem) {
                     return getDateHeaderWidget(item.date);
                   } else if (item is MatchItem) {
-                    return Padding(
-                        padding: const EdgeInsets.only(
-                            left: 16.0, top: 4.0, right: 16.0, bottom: 4.0),
-                        child: Column(
-                            children: <Widget>[
-                              getTeamScoreWidget(item.match.match_hometeam_name,
-                                  item.match.match_hometeam_score),
-                              getTeamScoreWidget(item.match.match_awayteam_name,
-                                  item.match.match_awayteam_score),
-                              getDividerWidget(item),
-                            ]
-                        )
-                    );
+                    return getMatchItemWidget(item.match);
                   }
                 });
           }
@@ -97,7 +89,7 @@ class EventsState extends State<EventsWidget> {
         padding: const EdgeInsets.only(left: 16.0, top: 4.0, bottom: 4.0),
         child: Text(
           new DateFormat.yMMMd().format(DateTime.parse(date)),
-          style: new TextStyle(fontSize: 15.0, color: Colors.white),
+          style: new TextStyle(fontSize: 15.0, color: Theme.Colors.red),
         ),
       ),
     );
@@ -144,6 +136,72 @@ class EventsState extends State<EventsWidget> {
         error,
         style: new TextStyle(fontSize: 16.0),
       ),
+    );
+  }
+
+  Widget getMatchItemWidget(FootballMatch match) {
+    return Container(
+        margin: const EdgeInsets.only(
+            left: 16.0, top: 6.0, right: 16.0, bottom: 6.0),
+        decoration: new BoxDecoration(
+          color: Colors.white,
+          shape: BoxShape.rectangle,
+          borderRadius: new BorderRadius.circular(4.0),
+        ),
+
+        child: Container(
+            child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 8.0, top: 10.0, right: 8.0, bottom: 10.0),
+                child: Column(
+                    children: <Widget>[
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              match.league_name,
+                              style: new TextStyle(fontSize: 15.0),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 6.0),
+                              child: Text(
+                                match.match_live,
+                                style: new TextStyle(fontSize: 15.0),
+                              ),
+                            ),
+                          ]
+                      ),
+
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              match.match_hometeam_name,
+                              style: new TextStyle(fontSize: 15.0),
+                            ),
+                            Text(
+                              match.match_hometeam_score,
+                              style: new TextStyle(fontSize: 15.0),
+                            ),
+                            Text(
+                              " - ",
+                              style: new TextStyle(fontSize: 15.0),
+                            ),
+                            Text(
+                              match.match_awayteam_score,
+                              style: new TextStyle(fontSize: 15.0),
+                            ),
+                            Text(
+                              match.match_awayteam_name,
+                              style: new TextStyle(fontSize: 15.0),
+                            ),
+                          ]
+                      )
+
+
+                    ])
+            )
+        )
     );
   }
 }
