@@ -1,6 +1,8 @@
-# sport_predictor
+# Sport Predictor
 
-Sport predictor application.
+A new open-source Flutter project that enables the developer to quickly get started with the Flutter application development. We have recreated a few screens of our famous React Native Starter Kit in Flutter!
+
+This project contains the basic features that are required to build an amazing Flutter application.
 
 ## Getting Started
 
