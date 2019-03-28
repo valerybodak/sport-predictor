@@ -1,6 +1,6 @@
 # Sport Predictor
 
-A new open-source Flutter project that enables the developer to quickly get started with the Flutter application development. 
+A new open-source Flutter project that enables the developer to quickly get started with the Flutter application development. This project is based on API Football (https://apifootball.com/api/)
 
 This project contains the basic features that are required to build an amazing Flutter application.
 
