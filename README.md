@@ -16,6 +16,7 @@ This project contains the basic features that are required to build an amazing F
 - [Send data to a new screen](https://flutter.dev/docs/cookbook/navigation/passing-data)
 - [Fetch data from the internet](https://flutter.dev/docs/cookbook/networking/fetch-data)
 - [Parsing JSON in the background](https://flutter.dev/docs/cookbook/networking/background-parsing)
+- [StreamBuilder](https://docs.flutter.io/flutter/widgets/StreamBuilder-class.html)
 
 This project is a starting point for a Flutter application.
 
