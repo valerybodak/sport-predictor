@@ -6,7 +6,10 @@ Sport Predictor app keeps you up-to-date with all the latest scores and live spo
 
 This project contains the basic features that are required to build an amazing Flutter application.
 
-## Getting Started
+## Features
+
+1. Standings
+2. Matches
 
 This project is a starting point for a Flutter application.
 
