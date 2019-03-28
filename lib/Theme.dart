@@ -13,7 +13,8 @@ class Colors {
 
   //static const Color planetCard = const Color(0xFF434273);
   static const Color red = const Color(0xFFCF102C);
-  static const Color lightGrey = const Color(0xFFF8F8F8);
+  static const Color grey_f8 = const Color(0xFFF8F8F8);
+  static const Color grey_c7 = const Color(0xFFC7C8D4);
 
 }
 

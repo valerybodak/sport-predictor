@@ -37,7 +37,7 @@ class EventsState extends State<EventsWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: new BoxDecoration(color: Theme.Colors.lightGrey),
+      decoration: new BoxDecoration(color: Theme.Colors.grey_f8),
       child: getListViewEvents(),
     );
   }
@@ -160,7 +160,7 @@ class EventsState extends State<EventsWidget> {
                           children: <Widget>[
                             Text(
                               match.league_name,
-                              style: new TextStyle(fontSize: 15.0),
+                              style: new TextStyle(color: Theme.Colors.grey_c7, fontSize: 15.0),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 6.0),
