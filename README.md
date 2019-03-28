@@ -8,8 +8,8 @@ This project contains the basic features that are required to build an amazing F
 
 ## Features
 
-1. Standings
-2. Matches
+1. Matches
+2. Standings
 
 ## Flutter Features
 - [BottomNavigationBar](https://docs.flutter.io/flutter/material/BottomNavigationBar-class.html)
