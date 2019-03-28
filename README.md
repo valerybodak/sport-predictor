@@ -12,8 +12,11 @@ This project contains the basic features that are required to build an amazing F
 2. Matches
 
 ## Flutter Features
-- BottomNavigationBar
-- Send data to a new screen
+-[BottomNavigationBar](https://docs.flutter.io/flutter/material/BottomNavigationBar-class.html)
+- [Send data to a new screen](https://flutter.dev/docs/cookbook/navigation/passing-data)
+- Fetch data from the internet
+- Parsing JSON in the background
+
 https://flutter.dev/docs/cookbook/navigation/passing-data
 
 This project is a starting point for a Flutter application.
