@@ -17,6 +17,7 @@ This project contains the basic features that are required to build an amazing F
 - [Fetch data from the internet](https://flutter.dev/docs/cookbook/networking/fetch-data)
 - [Parsing JSON in the background](https://flutter.dev/docs/cookbook/networking/background-parsing)
 - [StreamBuilder](https://docs.flutter.io/flutter/widgets/StreamBuilder-class.html)
+- [Custom fonts](https://flutter.dev/docs/cookbook/design/fonts)
 
 This project is a starting point for a Flutter application.
 
