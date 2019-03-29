@@ -11,7 +11,7 @@ This project contains the basic features that are required to build an amazing F
 1. Matches
 2. Standings
 
-![Matches](https://github.com/valerybodak/sport-predictor/blob/master/screenshots/screenshot_matches.png?raw=true)
+![Matches](https://github.com/valerybodak/sport-predictor/blob/master/screenshots/screenshot_matches.png?raw=true | width=200)
 
 ## Flutter Features
 - [BottomNavigationBar](https://docs.flutter.io/flutter/material/BottomNavigationBar-class.html)
