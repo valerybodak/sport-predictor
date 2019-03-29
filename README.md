@@ -11,8 +11,6 @@ This project contains the basic features that are required to build an amazing F
 1. Matches
 2. Standings
 
-<img src="https://camo.githubusercontent.com/..." data-canonical-src="https://github.com/valerybodak/sport-predictor/blob/master/screenshots/screenshot_matches.png?raw=true" width="200" height="400" />
-
 ![](https://github.com/valerybodak/sport-predictor/blob/master/screenshots/screenshot_matches.png?raw=true)
 
 ## Flutter Features
