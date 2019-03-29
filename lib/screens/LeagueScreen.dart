@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sport_predictor/model/League.dart';
 import 'package:sport_predictor/widgets/EventsWidget.dart';
+import 'package:sport_predictor/widgets/OddsWidget.dart';
 import 'package:sport_predictor/widgets/StandingsWidget.dart';
 
 class LeagueScreenArguments {
@@ -41,7 +42,7 @@ class _LeagueScreenState extends State<LeagueScreen> {
   }
 
   Widget _getBody(){
-    return _currentIndexBottomBar==0 ? EventsWidget(widget.league.league_id) : StandingsWidget(widget.league.league_id);
+    return getWidgetByTab(_currentIndexBottomBar);
 
   }
 
@@ -70,5 +71,16 @@ class _LeagueScreenState extends State<LeagueScreen> {
     setState(() {
       _currentIndexBottomBar = index;
     });
+  }
+
+  Widget getWidgetByTab(int index){
+    if(_currentIndexBottomBar==0) {
+      return EventsWidget(widget.league.league_id);
+    }else if(_currentIndexBottomBar==1){
+      return StandingsWidget(widget.league.league_id);
+    }else{
+      return OddsWidget(widget.league.league_id);
+    }
+
   }
 }
