@@ -16,6 +16,7 @@ class Colors {
   static const Color red = const Color(0xFFCF102C);
   static const Color grey_f8 = const Color(0xFFF8F8F8);
   static const Color grey_c7 = const Color(0xFFC7C8D4);
+  static const Color grey_8e = const Color(0xFF8E91A4);
 
 }
 
@@ -54,7 +55,14 @@ class TextStyles {
   static const TextStyle listDate = const TextStyle(
       color: Colors.blue,
       fontFamily: 'Poppins',
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w500,
+      fontSize: 14.0
+  );
+
+  static const TextStyle matchTime = const TextStyle(
+      color: Colors.grey_8e,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w400,
       fontSize: 14.0
   );
 }

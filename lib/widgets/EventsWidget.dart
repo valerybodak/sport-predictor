@@ -131,46 +131,48 @@ class EventsState extends State<EventsWidget> {
                             Padding(
                               padding: const EdgeInsets.only(top: 6.0),
                               child: Text(
-                                match.match_live,
-                                style: new TextStyle(fontSize: 15.0),
+                                match.match_time,
+                                style: Theme.TextStyles.matchTime,
                               ),
                             ),
                           ]
                       ),
 
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            new Flexible(child: Container(
-                              alignment: Alignment.centerRight,
-                              width: double.infinity,
-                              child: Text(
-                              match.match_hometeam_name,
-                              style: Theme.TextStyles.teamName,
-                            ),), flex: 1),
-                            new Flexible(
-                              child: Container(
-                                alignment: Alignment.center,
-                                width: 60.0,
-                                child: Text(
-                                  score,
-                                  style: Theme.TextStyles.score,
-                                ),
-                              ),
-                              flex: 1),
-                            new Flexible(
-                              child: Container(
+                      Container(
+                        margin: const EdgeInsets.only(top: 8.0),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: <Widget>[
+                              new Flexible(child: Container(
+                                alignment: Alignment.centerRight,
                                 width: double.infinity,
-                                alignment: Alignment.centerLeft,
                                 child: Text(
-                                  match.match_awayteam_name,
-                                    style: Theme.TextStyles.teamName,
+                                match.match_hometeam_name,
+                                style: Theme.TextStyles.teamName,
+                              ),), flex: 1),
+                              new Flexible(
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  width: 60.0,
+                                  child: Text(
+                                    score,
+                                    style: Theme.TextStyles.score,
+                                  ),
                                 ),
-                              ),
-                              flex: 1),
-                          ]
-                      )
-
+                                flex: 1),
+                              new Flexible(
+                                child: Container(
+                                  width: double.infinity,
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    match.match_awayteam_name,
+                                      style: Theme.TextStyles.teamName,
+                                  ),
+                                ),
+                                flex: 1),
+                            ]
+                        )
+                      ),
 
                     ])
             )
