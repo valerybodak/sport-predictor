@@ -43,6 +43,15 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  fonts:
+    - family: Poppins
+      fonts:
+      - asset: assets/fonts/Poppins-Medium.ttf
+      - asset: assets/fonts/Poppins-Regular.ttf
+      - asset: assets/fonts/Poppins-SemiBold.ttf
+      - asset: assets/fonts/Poppins-Light.ttf
+      - asset: assets/fonts/Poppins-Thin.ttf
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
@@ -70,6 +79,17 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+
+  #You can use numeric values. They all correspond to a particular named weight:
+  #100 Thin
+  #200 Extra Light
+  #300 Light
+  #400 Normal
+  #500 Medium
+  #600 Semi Bold
+  #700 Bold
+  #800 Extra Bold
+  #900 Ultra Bold
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages

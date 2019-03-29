@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:sport_predictor/blocks/events_bloc.dart';
 import 'package:sport_predictor/model/EventsResponse.dart';
 import 'package:sport_predictor/model/FootballMatch.dart';
+import 'package:sport_predictor/Theme.dart' as Theme;
 
 class EventsWidget extends StatefulWidget {
   final String leagueId;
@@ -35,7 +36,10 @@ class EventsState extends State<EventsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return getListViewEvents();
+    return Container(
+      decoration: new BoxDecoration(color: Theme.Colors.grey_f8),
+      child: getListViewEvents(),
+    );
   }
 
   Widget getProgressIndicator() {
@@ -69,19 +73,7 @@ class EventsState extends State<EventsWidget> {
                   if (item is DateItem) {
                     return getDateHeaderWidget(item.date);
                   } else if (item is MatchItem) {
-                    return Padding(
-                        padding: const EdgeInsets.only(
-                            left: 16.0, top: 4.0, right: 16.0, bottom: 4.0),
-                        child: Column(
-                            children: <Widget>[
-                              getTeamScoreWidget(item.match.match_hometeam_name,
-                                  item.match.match_hometeam_score),
-                              getTeamScoreWidget(item.match.match_awayteam_name,
-                                  item.match.match_awayteam_score),
-                              getDividerWidget(item),
-                            ]
-                        )
-                    );
+                    return getMatchItemWidget(item.match);
                   }
                 });
           }
@@ -92,50 +84,13 @@ class EventsState extends State<EventsWidget> {
 
   Widget getDateHeaderWidget(String date){
     return Container(
-      color: const Color(0xffD0D0D0),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 16.0, top: 4.0, bottom: 4.0),
-        child: Text(
+      margin: const EdgeInsets.only(
+          left: 32.0, top: 6.0, right: 16.0, bottom: 6.0),
+      child: Text(
           new DateFormat.yMMMd().format(DateTime.parse(date)),
-          style: new TextStyle(fontSize: 15.0, color: Colors.white),
+          style: Theme.TextStyles.listDate,
         ),
-      ),
     );
-  }
-
-  Widget getTeamScoreWidget(String teamName, String score){
-    return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Text(
-            teamName,
-            style: new TextStyle(fontSize: 15.0),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 6.0),
-            child: Text(
-              score,
-              style: new TextStyle(fontSize: 15.0),
-            ),
-          ),
-        ]
-    );
-  }
-
-  Widget getDividerWidget(MatchItem item){
-    if(item.isLastForDate){
-      return Container(
-        height: 0.0,
-      );
-    }else {
-      return Padding(
-          padding: const EdgeInsets.only(top: 8.0),
-          child: Container(
-            height: 1.0,
-            color: const Color(0xffD0D0D0),
-          )
-      );
-    }
   }
 
   Widget getErrorWidget(String error){
@@ -144,6 +99,84 @@ class EventsState extends State<EventsWidget> {
         error,
         style: new TextStyle(fontSize: 16.0),
       ),
+    );
+  }
+
+  Widget getMatchItemWidget(FootballMatch match) {
+
+    final score = match.match_hometeam_score + " - " + match.match_awayteam_score;
+
+    return Container(
+        margin: const EdgeInsets.only(
+            left: 16.0, top: 6.0, right: 16.0, bottom: 6.0),
+        decoration: new BoxDecoration(
+          color: Colors.white,
+          shape: BoxShape.rectangle,
+          borderRadius: new BorderRadius.circular(4.0),
+        ),
+
+        child: Container(
+            child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 10.0, top: 8.0, right: 10.0, bottom: 12.0),
+                child: Column(
+                    children: <Widget>[
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              match.league_name,
+                              style: Theme.TextStyles.leagueName,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 6.0),
+                              child: Text(
+                                match.match_time,
+                                style: Theme.TextStyles.matchTime,
+                              ),
+                            ),
+                          ]
+                      ),
+
+                      Container(
+                        margin: const EdgeInsets.only(top: 8.0),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: <Widget>[
+                              new Flexible(child: Container(
+                                alignment: Alignment.centerRight,
+                                width: double.infinity,
+                                child: Text(
+                                match.match_hometeam_name,
+                                style: Theme.TextStyles.teamName,
+                              ),), flex: 1),
+                              new Flexible(
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  width: 60.0,
+                                  child: Text(
+                                    score,
+                                    style: Theme.TextStyles.score,
+                                  ),
+                                ),
+                                flex: 1),
+                              new Flexible(
+                                child: Container(
+                                  width: double.infinity,
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    match.match_awayteam_name,
+                                      style: Theme.TextStyles.teamName,
+                                  ),
+                                ),
+                                flex: 1),
+                            ]
+                        )
+                      ),
+
+                    ])
+            )
+        )
     );
   }
 }
