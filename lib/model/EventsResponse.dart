@@ -15,7 +15,6 @@ class DateItem implements EventListItem {
 class MatchItem implements EventListItem {
 
   FootballMatch match;
-  bool isLastForDate = false;
 
   MatchItem(FootballMatch match){
     this.match = match;
@@ -50,9 +49,6 @@ class EventsResponse extends BaseResponse{
         var matchItem = MatchItem(match);
 
         if(currentDate!=match.match_date){
-
-          MatchItem prevItem = eventsList[eventsList.length-1];
-          prevItem.isLastForDate = true;
 
           eventsList.add(DateItem(match.match_date));
           currentDate = match.match_date;

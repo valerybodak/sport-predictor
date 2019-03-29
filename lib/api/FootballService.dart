@@ -46,7 +46,7 @@ class FootballService implements FootballServiceInterface {
     requestParams.addPathParam("action", "get_events");
     requestParams.addPathParam("league_id", leagueId.toString());
 
-    DateTime oneDayAgo = DateTime.now().subtract(new Duration(days: 20));
+    DateTime oneDayAgo = DateTime.now().subtract(new Duration(days: 1));
     DateTime thirtyDayFromNow = DateTime.now().add(new Duration(days: 31));
 
     var formatter = new DateFormat('yyyy-MM-dd');
