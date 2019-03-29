@@ -1,7 +1,7 @@
 # Sport Predictor
 
 A new open-source Flutter project that enables the developer to quickly get started with the Flutter application development. This project is based on API Football (https://apifootball.com/api/)
-
+Matches
 Sport Predictor app keeps you up-to-date with all the latest scores and live sports action.
 
 This project contains the basic features that are required to build an amazing Flutter application.
@@ -11,7 +11,7 @@ This project contains the basic features that are required to build an amazing F
 1. Matches
 2. Standings
 
-![Matches](https://github.com/valerybodak/sport-predictor/blob/master/screenshots/screenshot_matches.png?raw=true | width=200)
+![](https://github.com/valerybodak/sport-predictor/blob/master/screenshots/screenshot_matches.png?raw=true|width=200)
 
 ## Flutter Features
 - [BottomNavigationBar](https://docs.flutter.io/flutter/material/BottomNavigationBar-class.html)
