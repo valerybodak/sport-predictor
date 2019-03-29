@@ -126,7 +126,7 @@ class EventsState extends State<EventsWidget> {
                           children: <Widget>[
                             Text(
                               match.league_name,
-                              style: new TextStyle(color: Theme.Colors.grey_c7, fontSize: 15.0),
+                              style: Theme.TextStyles.leagueName,
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 6.0),
@@ -146,7 +146,7 @@ class EventsState extends State<EventsWidget> {
                               width: double.infinity,
                               child: Text(
                               match.match_hometeam_name,
-                              style: new TextStyle(fontSize: 16.0),
+                              style: Theme.TextStyles.teamName,
                             ),), flex: 1),
                             new Flexible(
                               child: Container(
@@ -164,7 +164,7 @@ class EventsState extends State<EventsWidget> {
                                 alignment: Alignment.centerLeft,
                                 child: Text(
                                   match.match_awayteam_name,
-                                  style: new TextStyle(fontSize: 16.0),
+                                    style: Theme.TextStyles.teamName,
                                 ),
                               ),
                               flex: 1),

@@ -11,7 +11,7 @@ class Colors {
   static const Color appBarGradientStart = const Color(0xFF3383FC);
   static const Color appBarGradientEnd = const Color(0xFF00C6FF);
 
-  //static const Color planetCard = const Color(0xFF434273);
+  static const Color black = const Color(0xff000000);
   static const Color red = const Color(0xFFCF102C);
   static const Color grey_f8 = const Color(0xFFF8F8F8);
   static const Color grey_c7 = const Color(0xFFC7C8D4);
@@ -29,10 +29,17 @@ class TextStyles {
 
   const TextStyles();
 
-  static const TextStyle appBarTitle = const TextStyle(
-    color: Colors.appBarTitle,
+  static const TextStyle leagueName = const TextStyle(
+      color: Colors.grey_c7,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w400,
+      fontSize: 15.0
+  );
+
+  static const TextStyle teamName = const TextStyle(
+    color: Colors.black,
     fontFamily: 'Poppins',
-    fontWeight: FontWeight.w600,
-    fontSize: 36.0
+    fontWeight: FontWeight.w400,
+    fontSize: 16.0
   );
 }
