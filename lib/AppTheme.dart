@@ -4,19 +4,16 @@ class Colors {
 
   const Colors();
 
-
-  static const Color appBarTitle = const Color(0xFFFFFFFF);
-  static const Color appBarIconColor = const Color(0xFFFFFFFF);
-  static const Color appBarDetailBackground = const Color(0x00FFFFFF);
-  static const Color appBarGradientStart = const Color(0xFF3383FC);
-  static const Color appBarGradientEnd = const Color(0xFF00C6FF);
-
+  static const Color white = const Color(0xffffffff);
   static const Color black = const Color(0xff000000);
   static const Color blue = const Color(0xFF3383FC);
   static const Color red = const Color(0xFFCF102C);
   static const Color grey_f8 = const Color(0xFFF8F8F8);
   static const Color grey_c7 = const Color(0xFFC7C8D4);
   static const Color grey_8e = const Color(0xFF8E91A4);
+  static const Color purple_fd = const Color(0xFFFD4B93);
+  static const Color purple_e6 = const Color(0xFFE65BB5);
+  static const Color violet_6c = const Color(0xff6C50F3);
 
 }
 
@@ -46,14 +43,14 @@ class TextStyles {
   );
 
   static const TextStyle score = const TextStyle(
-      color: Colors.blue,
+      color: Colors.purple_fd,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.bold,
-      fontSize: 15.0
+      fontSize: 16.0
   );
 
   static const TextStyle listDate = const TextStyle(
-      color: Colors.blue,
+      color: Colors.white,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w500,
       fontSize: 14.0
@@ -64,5 +61,20 @@ class TextStyles {
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w400,
       fontSize: 14.0
+  );
+}
+
+class Decorations{
+
+  static const BoxDecoration linearPurpleGradient = const BoxDecoration(
+    // Box decoration takes a gradient
+    gradient: LinearGradient(
+      begin: Alignment.bottomCenter,
+      end: Alignment.topCenter,
+      colors: [
+        Colors.violet_6c,
+        Colors.purple_e6,
+      ],
+    ),
   );
 }

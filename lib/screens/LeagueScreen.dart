@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sport_predictor/AppTheme.dart' as AppTheme;
 import 'package:sport_predictor/model/League.dart';
 import 'package:sport_predictor/widgets/EventsWidget.dart';
 import 'package:sport_predictor/widgets/OddsWidget.dart';
@@ -35,13 +36,17 @@ class _LeagueScreenState extends State<LeagueScreen> {
           title: Text(widget.league.league_name),
       ),
 
-      body: _getBody(),
+      body: Container(
+        // Add box decoration
+        decoration: AppTheme.Decorations.linearPurpleGradient,
+        child: _getContentWidget(),
+      ),
 
       bottomNavigationBar: _getBottomNavigationBar(),
     );
   }
 
-  Widget _getBody(){
+  Widget _getContentWidget(){
     return getWidgetByTab(_currentIndexBottomBar);
 
   }

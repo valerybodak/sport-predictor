@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:sport_predictor/blocks/events_bloc.dart';
 import 'package:sport_predictor/model/EventsResponse.dart';
 import 'package:sport_predictor/model/FootballMatch.dart';
-import 'package:sport_predictor/Theme.dart' as Theme;
+import 'package:sport_predictor/AppTheme.dart' as AppTheme;
 
 class EventsWidget extends StatefulWidget {
   final String leagueId;
@@ -36,10 +36,7 @@ class EventsState extends State<EventsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: new BoxDecoration(color: Theme.Colors.grey_f8),
-      child: getListViewEvents(),
-    );
+    return getListViewEvents();
   }
 
   Widget getProgressIndicator() {
@@ -88,7 +85,7 @@ class EventsState extends State<EventsWidget> {
           left: 32.0, top: 6.0, right: 16.0, bottom: 6.0),
       child: Text(
           new DateFormat.yMMMd().format(DateTime.parse(date)),
-          style: Theme.TextStyles.listDate,
+          style: AppTheme.TextStyles.listDate,
         ),
     );
   }
@@ -126,13 +123,13 @@ class EventsState extends State<EventsWidget> {
                           children: <Widget>[
                             Text(
                               match.league_name,
-                              style: Theme.TextStyles.leagueName,
+                              style: AppTheme.TextStyles.leagueName,
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 6.0),
                               child: Text(
                                 match.match_time,
-                                style: Theme.TextStyles.matchTime,
+                                style: AppTheme.TextStyles.matchTime,
                               ),
                             ),
                           ]
@@ -148,7 +145,7 @@ class EventsState extends State<EventsWidget> {
                                 width: double.infinity,
                                 child: Text(
                                 match.match_hometeam_name,
-                                style: Theme.TextStyles.teamName,
+                                style: AppTheme.TextStyles.teamName,
                               ),), flex: 1),
                               new Flexible(
                                 child: Container(
@@ -156,7 +153,7 @@ class EventsState extends State<EventsWidget> {
                                   width: 60.0,
                                   child: Text(
                                     score,
-                                    style: Theme.TextStyles.score,
+                                    style: AppTheme.TextStyles.score,
                                   ),
                                 ),
                                 flex: 1),
@@ -166,7 +163,7 @@ class EventsState extends State<EventsWidget> {
                                   alignment: Alignment.centerLeft,
                                   child: Text(
                                     match.match_awayteam_name,
-                                      style: Theme.TextStyles.teamName,
+                                      style: AppTheme.TextStyles.teamName,
                                   ),
                                 ),
                                 flex: 1),
