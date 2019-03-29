@@ -88,7 +88,7 @@ class EventsState extends State<EventsWidget> {
           left: 32.0, top: 6.0, right: 16.0, bottom: 6.0),
       child: Text(
           new DateFormat.yMMMd().format(DateTime.parse(date)),
-          style: new TextStyle(fontSize: 16.0, color: Theme.Colors.red),
+          style: Theme.TextStyles.listDate,
         ),
     );
   }

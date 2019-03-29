@@ -50,4 +50,11 @@ class TextStyles {
       fontWeight: FontWeight.bold,
       fontSize: 15.0
   );
+
+  static const TextStyle listDate = const TextStyle(
+      color: Colors.blue,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.bold,
+      fontSize: 14.0
+  );
 }
