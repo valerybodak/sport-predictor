@@ -3,24 +3,17 @@ import 'package:sport_predictor/model/League.dart';
 import 'package:sport_predictor/widgets/EventsWidget.dart';
 import 'package:sport_predictor/widgets/StandingsWidget.dart';
 
-class LeagueScreenArguments {
-  final String title;
-  final String message;
-
-  LeagueScreenArguments(this.title, this.message);
-}
-
-class LeagueScreen extends StatefulWidget {
+class OddsScreen extends StatefulWidget {
 
   final League league;
 
-  LeagueScreen({Key key, @required this.league}) : super(key: key);
+  OddsScreen({Key key, @required this.league}) : super(key: key);
 
   @override
-  _LeagueScreenState createState() => _LeagueScreenState();
+  _OddsScreenState createState() => _OddsScreenState();
 }
 
-class _LeagueScreenState extends State<LeagueScreen> {
+class _OddsScreenState extends State<OddsScreen> {
 
   int _currentIndexBottomBar = 0;
 
@@ -59,8 +52,8 @@ class _LeagueScreenState extends State<LeagueScreen> {
           title: new Text('Standings'),
         ),
         BottomNavigationBarItem(
-          icon: new Icon(Icons.score),
-          title: new Text('Odds'),
+          icon: new Icon(Icons.home),
+          title: new Text('Matches'),
         ),
       ],
     );
