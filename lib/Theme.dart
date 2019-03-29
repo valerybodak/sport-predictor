@@ -12,6 +12,7 @@ class Colors {
   static const Color appBarGradientEnd = const Color(0xFF00C6FF);
 
   static const Color black = const Color(0xff000000);
+  static const Color blue = const Color(0xFF3383FC);
   static const Color red = const Color(0xFFCF102C);
   static const Color grey_f8 = const Color(0xFFF8F8F8);
   static const Color grey_c7 = const Color(0xFFC7C8D4);
@@ -33,13 +34,20 @@ class TextStyles {
       color: Colors.grey_c7,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w400,
-      fontSize: 15.0
+      fontSize: 14.0
   );
 
   static const TextStyle teamName = const TextStyle(
     color: Colors.black,
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w400,
-    fontSize: 16.0
+    fontSize: 14.0
+  );
+
+  static const TextStyle score = const TextStyle(
+      color: Colors.blue,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.bold,
+      fontSize: 15.0
   );
 }

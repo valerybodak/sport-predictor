@@ -154,7 +154,7 @@ class EventsState extends State<EventsWidget> {
                                 width: 60.0,
                                 child: Text(
                                   score,
-                                  style: new TextStyle(color: Theme.Colors.red, fontSize: 17.0),
+                                  style: Theme.TextStyles.score,
                                 ),
                               ),
                               flex: 1),
