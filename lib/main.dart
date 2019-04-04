@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sport_predictor/AppTheme.dart' as AppTheme;
 import 'package:sport_predictor/screens/LeagueScreen.dart';
 import 'package:sport_predictor/screens/LeaguesListScreen.dart';
-import 'package:sport_predictor/AppTheme.dart' as AppTheme;
+import 'package:sport_predictor/screens/OnboardingScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         // When we navigate to the "/" route, build the FirstScreen Widget
-        '/': (context) => LeaguesListScreen(),
+        '/': (context) => OnboardingScreen(),
+        '/leaguesListScreen': (context) => LeaguesListScreen(),
         // When we navigate to the "/second" route, build the SecondScreen Widget
         '/leagueScreen': (context) => LeagueScreen(league: null),
       },
