@@ -3,21 +3,32 @@ import 'package:intl/intl.dart';
 import 'package:sport_predictor/AppTheme.dart' as AppTheme;
 
 class OnboardingPage extends StatelessWidget {
-
   final String title;
   final String description;
   final BoxDecoration background;
-
 
   OnboardingPage(this.title, this.description, this.background);
 
   Widget build(BuildContext context) {
     return Container(
-              decoration: this.background,
-              child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(this.description),
-              ),
-    );
+        decoration: background,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Container(
+                  child: Row(children: <Widget>[
+                Text(
+                  this.title.toString(),
+                  style: new TextStyle(fontSize: 14.0),
+                ),
+              ])),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  this.description,
+                  style: new TextStyle(fontSize: 14.0),
+                ),
+              )
+            ]));
   }
 }

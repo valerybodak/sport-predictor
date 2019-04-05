@@ -38,7 +38,7 @@ class _LeagueScreenState extends State<LeagueScreen> {
 
       body: Container(
         // Add box decoration
-        decoration: AppTheme.Decorations.linearPurpleGradient,
+        decoration: AppTheme.Decorations.purpleGradient,
         child: _getContentWidget(),
       ),
 
