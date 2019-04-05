@@ -32,8 +32,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
 
-    //final LeagueScreenArguments args = ModalRoute.of(context).settings.arguments;
-
     return new Scaffold(
       body: new IconTheme(
         data: new IconThemeData(color: _kArrowColor),
@@ -51,7 +49,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               left: 0.0,
               right: 0.0,
               child: new Container(
-                color: Colors.grey[800].withOpacity(0.5),
                 padding: const EdgeInsets.all(20.0),
                 child: new Center(
                   child: new DotsIndicator(
