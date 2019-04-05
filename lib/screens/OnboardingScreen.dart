@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sport_predictor/AppTheme.dart' as AppTheme;
-import 'package:sport_predictor/view/DotsIndicator.dart';
+import 'package:sport_predictor/widgets/DotsIndicator.dart';
+import 'package:sport_predictor/widgets/OnboardingPage.dart';
 
 class OnboardingScreen extends StatefulWidget {
 
@@ -19,18 +20,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final _kArrowColor = Colors.black.withOpacity(0.8);
 
   final List<Widget> _pages = <Widget>[
-    new ConstrainedBox(
-      constraints: const BoxConstraints.expand(),
-      child: new FlutterLogo(colors: Colors.blue),
-    ),
-    new ConstrainedBox(
-      constraints: const BoxConstraints.expand(),
-      child: new FlutterLogo(style: FlutterLogoStyle.stacked, colors: Colors.red),
-    ),
-    new ConstrainedBox(
-      constraints: const BoxConstraints.expand(),
-      child: new FlutterLogo(style: FlutterLogoStyle.horizontal, colors: Colors.green),
-    ),
+    OnboardingPage("hello", "hellodesc124"),
+    OnboardingPage("hello2", "hellodessgsdgc"),
+    OnboardingPage("hello3", "hellodessdgs235252c"),
   ];
 
   @override
