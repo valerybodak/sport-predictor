@@ -27,7 +27,7 @@ class _OddsWidgetState extends State<OddsWidget> {
   Widget _getBody(){
     return Container(
       // Add box decoration
-      decoration: Theme.Decorations.linearPurpleGradient,
+      decoration: Theme.Decorations.purpleGradient,
       child: Center(
         child: new Text('Standings'),
       ),

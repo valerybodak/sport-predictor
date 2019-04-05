@@ -6,23 +6,18 @@ class OnboardingPage extends StatelessWidget {
 
   final String title;
   final String description;
+  final BoxDecoration background;
 
-  OnboardingPage(this.title, this.description);
+
+  OnboardingPage(this.title, this.description, this.background);
 
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text(this.title),
-        ),
-        body: Center(
-          child: DecoratedBox(
-            decoration: BoxDecoration(color: Colors.lightBlueAccent),
-            child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(this.description),
-          ),
-        ),
-      ),
+    return Container(
+              decoration: this.background,
+              child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(this.description),
+              ),
     );
   }
 }

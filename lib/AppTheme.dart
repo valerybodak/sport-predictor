@@ -13,7 +13,10 @@ class Colors {
   static const Color grey_8e = const Color(0xFF8E91A4);
   static const Color purple_fd = const Color(0xFFFD4B93);
   static const Color purple_e6 = const Color(0xFFE65BB5);
+  static const Color purple_f2 = const Color(0xFFF2709c);
   static const Color violet_6c = const Color(0xff6C50F3);
+
+  static const Color orange_94 = const Color(0xffff9472);
 
 }
 
@@ -66,7 +69,8 @@ class TextStyles {
 
 class Decorations{
 
-  static const BoxDecoration linearPurpleGradient = const BoxDecoration(
+  //https://uigradients.com
+  static const BoxDecoration purpleGradient = const BoxDecoration(
     // Box decoration takes a gradient
     gradient: LinearGradient(
       begin: Alignment.bottomCenter,
@@ -74,6 +78,30 @@ class Decorations{
       colors: [
         Colors.violet_6c,
         Colors.purple_e6,
+      ],
+    ),
+  );
+
+  static const BoxDecoration nelsonGradient = const BoxDecoration(
+    // Box decoration takes a gradient
+    gradient: LinearGradient(
+      begin: Alignment.bottomCenter,
+      end: Alignment.topCenter,
+      colors: [
+        const Color(0xFFF2709c),
+        const Color(0xffff9472),
+      ],
+    ),
+  );
+
+  static const BoxDecoration reefGradient = const BoxDecoration(
+    // Box decoration takes a gradient
+    gradient: LinearGradient(
+      begin: Alignment.bottomCenter,
+      end: Alignment.topCenter,
+      colors: [
+        const Color(0xFF3a7bd5),
+        const Color(0xFF00d2ff),
       ],
     ),
   );
