@@ -20,7 +20,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final _kArrowColor = Colors.black.withOpacity(0.8);
 
   final List<Widget> _pages = <Widget>[
-    OnboardingPage("Mathces", "Lorem ipsum Lorem ipsum", AppTheme.Decorations
+    OnboardingPage("Matches", "Lorem ipsum Lorem ipsum", AppTheme.Decorations
         .purpleGradient),
     OnboardingPage("Standings", "Lorem ipsum Lorem ipsum", AppTheme.Decorations
         .nelsonGradient),

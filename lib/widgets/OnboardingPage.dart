@@ -22,13 +22,26 @@ class OnboardingPage extends StatelessWidget {
                   style: new TextStyle(fontSize: 14.0),
                 ),
               ])),
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0),
-                child: Text(
-                  this.description,
-                  style: new TextStyle(fontSize: 14.0),
+              Column(children: <Widget>[
+                Text(
+                  this.title.toString(),
+                  style: new TextStyle(
+                    fontSize: 28.0,
+                    color: Colors.white,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w700
+                  ),
                 ),
-              )
+                Text(
+                  this.description.toString(),
+                    style: new TextStyle(
+                        fontSize: 15.0,
+                        color: Colors.white,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w400
+                    ),
+                ),
+              ])
             ]));
   }
 }
