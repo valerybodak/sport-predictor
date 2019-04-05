@@ -18,6 +18,7 @@ class Colors {
   static const Color violet_6c = const Color(0xff6C50F3);
 
   static const Color orange_94 = const Color(0xffff9472);
+  static const Color yellow_34 = const Color(0xFFffd34c);
 
 }
 

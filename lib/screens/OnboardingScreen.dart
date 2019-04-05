@@ -28,7 +28,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     OnboardingPage("Standings",
         "Lorem ipsum Lorem ipsum bla bla bla",
         AppTheme.Decorations.nelsonGradient, 'assets/ic_trophy.png',
-        AppTheme.Colors.purple_f8),
+        AppTheme.Colors.yellow_34),
 
     OnboardingPage("Odds",
         "Lorem ipsum Lorem ipsum",
