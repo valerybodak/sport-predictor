@@ -19,6 +19,7 @@ class Colors {
 
   static const Color orange_94 = const Color(0xffff9472);
   static const Color yellow_34 = const Color(0xFFffd34c);
+  static const Color lime = const Color(0xFF74FF65);
 
 }
 
