@@ -19,7 +19,7 @@ class OnboardingPage extends StatelessWidget {
                 alignment: AlignmentDirectional(0, 0),
                 children: <Widget>[
                   CustomPaint(painter: CircleWidget(AppTheme.Colors.purple_f8)),
-                  Image.asset('assets/soccer_ball.png', width: 50, height: 50,
+                  Image.asset('assets/soccer_ball.png', width: 60, height: 60,
                   ),
                 ]
               ),

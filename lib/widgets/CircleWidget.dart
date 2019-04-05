@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sport_predictor/AppTheme.dart' as AppTheme;
 
 class CircleWidget extends CustomPainter {
 
