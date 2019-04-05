@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:sport_predictor/AppTheme.dart' as AppTheme;
+import 'package:sport_predictor/widgets/CircleWidget.dart';
 
 class OnboardingPage extends StatelessWidget {
   final String title;
@@ -16,12 +16,8 @@ class OnboardingPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
-                  child: Row(children: <Widget>[
-                Text(
-                  this.title.toString(),
-                  style: new TextStyle(fontSize: 14.0),
-                ),
-              ])),
+                child: CustomPaint(painter: CircleWidget(AppTheme.Colors.purple_f8)),
+              ),
               Column(children: <Widget>[
                 Text(
                   this.title.toString(),
