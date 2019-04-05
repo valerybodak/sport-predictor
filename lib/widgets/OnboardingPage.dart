@@ -18,9 +18,14 @@ class OnboardingPage extends StatelessWidget {
               Stack(
                 alignment: AlignmentDirectional(0, 0),
                 children: <Widget>[
-                  CustomPaint(painter: CircleWidget(AppTheme.Colors.purple_f8)),
-                  Image.asset('assets/soccer_ball.png', width: 60, height: 60,
-                  ),
+                  Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: new BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppTheme.Colors.purple_f8,
+                  )),
+                  Image.asset('assets/soccer_ball.png', width: 60, height: 60),
                 ]
               ),
               Column(children: <Widget>[
