@@ -33,7 +33,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     OnboardingPage("Odds",
         "Lorem ipsum Lorem ipsum",
         AppTheme.Decorations.reefGradient, 'assets/ic_bet.png',
-        AppTheme.Colors.purple_f8),
+        const Color(0xFF74FF65)),
   ];
 
   @override
