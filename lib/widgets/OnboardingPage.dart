@@ -15,8 +15,13 @@ class OnboardingPage extends StatelessWidget {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Container(
-                child: CustomPaint(painter: CircleWidget(AppTheme.Colors.purple_f8)),
+              Stack(
+                alignment: AlignmentDirectional(0, 0),
+                children: <Widget>[
+                  CustomPaint(painter: CircleWidget(AppTheme.Colors.purple_f8)),
+                  Image.asset('assets/soccer_ball.png', width: 50, height: 50,
+                  ),
+                ]
               ),
               Column(children: <Widget>[
                 Text(

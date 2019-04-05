@@ -9,7 +9,6 @@ class CircleWidget extends CustomPainter {
   CircleWidget(this.color) {
     _paint = Paint()
       ..color = color
-      ..strokeWidth = 10.0
       ..style = PaintingStyle.fill;
   }
 
