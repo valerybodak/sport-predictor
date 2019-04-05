@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sport_predictor/AppTheme.dart' as AppTheme;
-import 'package:sport_predictor/widgets/CircleWidget.dart';
 
 class OnboardingPage extends StatelessWidget {
   final String title;
@@ -19,13 +18,22 @@ class OnboardingPage extends StatelessWidget {
                 alignment: AlignmentDirectional(0, 0),
                 children: <Widget>[
                   Container(
-                  width: 100.0,
-                  height: 100.0,
-                  decoration: new BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppTheme.Colors.purple_f8,
-                  )),
-                  Image.asset('assets/soccer_ball.png', width: 60, height: 60),
+                    width: 100.0,
+                    height: 100.0,
+                    decoration: new BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppTheme.Colors.purple_f8,
+                          blurRadius: 40.0, // has the effect of softening
+                          // the shadow
+                          spreadRadius: 10.0, // has the effect of extending
+                          // the shadow
+                        )
+                      ],
+                      shape: BoxShape.circle,
+                      color: AppTheme.Colors.purple_f8,
+                    )),
+                    Image.asset('assets/soccer_ball.png', width: 60, height: 60),
                 ]
               ),
               Column(children: <Widget>[
