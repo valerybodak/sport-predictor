@@ -20,13 +20,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final _kArrowColor = Colors.black.withOpacity(0.8);
 
   final List<Widget> _pages = <Widget>[
-    OnboardingPage("Matches", "All Soccer Scores & Live Results", AppTheme.Decorations
-        .purpleGradient),
-    OnboardingPage("Standings", "Lorem ipsum Lorem ipsum bla bla bla", AppTheme
-        .Decorations
-        .nelsonGradient),
-    OnboardingPage("Odds", "Lorem ipsum Lorem ipsum", AppTheme.Decorations
-        .reefGradient),
+    OnboardingPage("Matches",
+        "All Soccer Scores & Live Results",
+        AppTheme.Decorations.purpleGradient, 'assets/ic_soccer_ball.png',
+        AppTheme.Colors.purple_f8),
+
+    OnboardingPage("Standings",
+        "Lorem ipsum Lorem ipsum bla bla bla",
+        AppTheme.Decorations.nelsonGradient, 'assets/ic_trophy.png',
+        AppTheme.Colors.purple_f8),
+
+    OnboardingPage("Odds",
+        "Lorem ipsum Lorem ipsum",
+        AppTheme.Decorations.reefGradient, 'assets/ic_bet.png',
+        AppTheme.Colors.purple_f8),
   ];
 
   @override

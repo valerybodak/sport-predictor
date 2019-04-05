@@ -5,8 +5,11 @@ class OnboardingPage extends StatelessWidget {
   final String title;
   final String description;
   final BoxDecoration background;
+  final String iconPath;
+  final Color iconBackgroundColor;
 
-  OnboardingPage(this.title, this.description, this.background);
+  OnboardingPage(this.title, this.description, this.background, this
+      .iconPath, this.iconBackgroundColor);
 
   Widget build(BuildContext context) {
     return Container(
@@ -14,16 +17,14 @@ class OnboardingPage extends StatelessWidget {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Stack(
-                alignment: AlignmentDirectional(0, 0),
-                children: <Widget>[
-                  Container(
+              Stack(alignment: AlignmentDirectional(0, 0), children: <Widget>[
+                Container(
                     width: 100.0,
                     height: 100.0,
                     decoration: new BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: AppTheme.Colors.purple_f8,
+                          color: this.iconBackgroundColor,
                           blurRadius: 40.0, // has the effect of softening
                           // the shadow
                           spreadRadius: 10.0, // has the effect of extending
@@ -31,29 +32,26 @@ class OnboardingPage extends StatelessWidget {
                         )
                       ],
                       shape: BoxShape.circle,
-                      color: AppTheme.Colors.purple_f8,
+                      color: this.iconBackgroundColor,
                     )),
-                    Image.asset('assets/soccer_ball.png', width: 60, height: 60),
-                ]
-              ),
+                Image.asset(this.iconPath, width: 60, height: 60),
+              ]),
               Column(children: <Widget>[
                 Text(
                   this.title.toString(),
                   style: new TextStyle(
-                    fontSize: 28.0,
-                    color: Colors.white,
-                    fontFamily: 'Poppins',
-                    fontWeight: FontWeight.w700
-                  ),
+                      fontSize: 28.0,
+                      color: Colors.white,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w700),
                 ),
                 Text(
                   this.description.toString(),
-                    style: new TextStyle(
-                        fontSize: 15.0,
-                        color: Colors.white,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400
-                    ),
+                  style: new TextStyle(
+                      fontSize: 15.0,
+                      color: Colors.white,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w400),
                 ),
               ])
             ]));

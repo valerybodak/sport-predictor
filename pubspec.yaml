@@ -44,7 +44,9 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/soccer_ball.png
+    - assets/ic_soccer_ball.png
+    - assets/ic_trophy.png
+    - assets/ic_bet.png
 
   fonts:
     - family: Poppins
