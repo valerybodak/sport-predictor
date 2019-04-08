@@ -45,10 +45,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         child: new Stack(
           children: <Widget>[
             new PageView.builder(
+              itemCount: _pages.length,
               physics: new AlwaysScrollableScrollPhysics(),
               controller: _pageController,
               itemBuilder: (BuildContext context, int index) {
-                return _pages[index % _pages.length];
+                return _pages[index];
               },
             ),
             new Positioned(
@@ -56,7 +57,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               left: 0.0,
               right: 0.0,
               child: new Container(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(30.0),
                 child: new Center(
                   child: new DotsIndicator(
                     controller: _pageController,
