@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sport_predictor/AppTheme.dart' as AppTheme;
 import 'package:sport_predictor/consts/CommonConsts.dart';
+import 'package:sport_predictor/screens/LeaguesListScreen.dart';
 
 class OnboardingPage extends StatelessWidget {
+
   final String title;
   final String description;
   final BoxDecoration background;
@@ -57,28 +59,43 @@ class OnboardingPage extends StatelessWidget {
                 ])
               ]
           ),
-          getButtonOkWidget()
+          getButtonOkWidget(context)
           ])
     );
   }
 
-  Widget getButtonOkWidget(){
+  Widget getButtonOkWidget(BuildContext context){
     if(this.lastPage) {
       return Positioned(
         bottom: 0.0,
         right: 0.0,
-        child: new Container(
-          padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-          alignment: Alignment.center,
-          height: CommonConsts.ONBOARDING_BOTTOM_CONTAINER_HEIGHT,
-          child: Text(
-            "OK",
-            style: AppTheme.TextStyles.onboardingButtonOK,
-          ),
-        ),
+        child:
+          GestureDetector(
+            onTap: () {
+              _onClickOK(context);
+            },
+            child: new Container(
+            padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+            alignment: Alignment.center,
+            height: CommonConsts.ONBOARDING_BOTTOM_CONTAINER_HEIGHT,
+            child: Text(
+              "OK",
+              style: AppTheme.TextStyles.onboardingButtonOK,
+            ),
+          )
+        )
       );
     }else{
       return Container();
     }
+  }
+
+  _onClickOK(BuildContext context){
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => LeaguesListScreen(),
+      ),
+    );
   }
 }
