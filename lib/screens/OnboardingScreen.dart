@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sport_predictor/AppTheme.dart' as AppTheme;
+import 'package:sport_predictor/consts/CommonConsts.dart';
 import 'package:sport_predictor/widgets/DotsIndicator.dart';
 import 'package:sport_predictor/widgets/OnboardingPage.dart';
 
@@ -61,7 +62,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               left: 0.0,
               right: 0.0,
               child: new Container(
-                padding: const EdgeInsets.all(30.0),
+                height: CommonConsts.ONBOARDING_BOTTOM_CONTAINER_HEIGHT,
                 child: new Center(
                   child: new DotsIndicator(
                     controller: _pageController,

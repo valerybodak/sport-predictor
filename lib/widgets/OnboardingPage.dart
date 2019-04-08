@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sport_predictor/AppTheme.dart' as AppTheme;
+import 'package:sport_predictor/consts/CommonConsts.dart';
 
 class OnboardingPage extends StatelessWidget {
   final String title;
@@ -69,7 +70,7 @@ class OnboardingPage extends StatelessWidget {
         child: new Container(
           padding: const EdgeInsets.only(left: 30.0, right: 30.0),
           alignment: Alignment.center,
-          height: 70,
+          height: CommonConsts.ONBOARDING_BOTTOM_CONTAINER_HEIGHT,
           child: Text(
             "OK",
             style: AppTheme.TextStyles.onboardingButtonOK,
