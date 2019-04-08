@@ -34,6 +34,20 @@ class TextStyles {
 
   const TextStyles();
 
+  static const TextStyle onboardingPageTitle = const TextStyle(
+      fontSize: 26.0,
+      color: Colors.white,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w700
+  );
+
+  static const TextStyle onboardingPageDescription = const TextStyle(
+      fontSize: 14.0,
+      color: Colors.white,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w400
+  );
+
   static const TextStyle leagueName = const TextStyle(
       color: Colors.grey_c7,
       fontFamily: 'Poppins',

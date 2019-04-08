@@ -8,8 +8,11 @@ class OnboardingPage extends StatelessWidget {
   final String iconPath;
   final Color iconBackgroundColor;
 
-  OnboardingPage(this.title, this.description, this.background, this
-      .iconPath, this.iconBackgroundColor);
+  OnboardingPage(this.title,
+      this.description,
+      this.background,
+      this.iconPath,
+      this.iconBackgroundColor);
 
   Widget build(BuildContext context) {
     return Container(
@@ -39,19 +42,11 @@ class OnboardingPage extends StatelessWidget {
               Column(children: <Widget>[
                 Text(
                   this.title.toString(),
-                  style: new TextStyle(
-                      fontSize: 28.0,
-                      color: Colors.white,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w700),
+                  style: AppTheme.TextStyles.onboardingPageTitle,
                 ),
                 Text(
                   this.description.toString(),
-                  style: new TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.white,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w400),
+                  style: AppTheme.TextStyles.onboardingPageDescription,
                 ),
               ])
             ]));

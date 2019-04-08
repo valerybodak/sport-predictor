@@ -12,12 +12,13 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
 
   final _pageController = new PageController();
+  final _kArrowColor = Colors.black.withOpacity(0.8);
 
   static const _kDuration = const Duration(milliseconds: 300);
 
   static const _kCurve = Curves.ease;
 
-  final _kArrowColor = Colors.black.withOpacity(0.8);
+  int currentPageIndex = 0;
 
   final List<Widget> _pages = <Widget>[
     OnboardingPage("Matches",
@@ -38,6 +39,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    print("BUILD");
+
+    Widget buttonOk;
+    //if(currentPageIndex==_pages.length){
+      buttonOk = getButtonOkWidget();
+    //}
 
     return new Scaffold(
       body: new IconTheme(
@@ -62,19 +70,40 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: new DotsIndicator(
                     controller: _pageController,
                     itemCount: _pages.length,
-                    onPageSelected: (int page) {
+                    onPageSelected: (int index) {
+
+                      currentPageIndex = index;
+
                       _pageController.animateToPage(
-                        page,
+                        index,
                         duration: _kDuration,
                         curve: _kCurve,
                       );
                     },
                   ),
                 ),
-
               ),
             ),
+            buttonOk
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget getButtonOkWidget(){
+    return Positioned(
+      bottom: 0.0,
+      right: 0.0,
+      child: new Container(
+        padding: const EdgeInsets.all(30.0),
+        child: Text(
+          "OK",
+          style: new TextStyle(
+              fontSize: 15.0,
+              color: Colors.white,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w400),
         ),
       ),
     );
