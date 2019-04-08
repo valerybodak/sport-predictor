@@ -52,7 +52,7 @@ class TextStyles {
       fontSize: 15.0,
       color: Colors.white,
       fontFamily: 'Poppins',
-      fontWeight: FontWeight.w400
+      fontWeight: FontWeight.w700
   );
 
   static const TextStyle leagueName = const TextStyle(

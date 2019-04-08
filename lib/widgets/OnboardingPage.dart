@@ -67,7 +67,9 @@ class OnboardingPage extends StatelessWidget {
         bottom: 0.0,
         right: 0.0,
         child: new Container(
-          padding: const EdgeInsets.all(30.0),
+          padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+          alignment: Alignment.center,
+          height: 70,
           child: Text(
             "OK",
             style: AppTheme.TextStyles.onboardingButtonOK,
