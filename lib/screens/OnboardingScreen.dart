@@ -24,28 +24,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     OnboardingPage("Matches",
         "All Soccer Scores & Live Results",
         AppTheme.Decorations.purpleGradient, 'assets/ic_soccer_ball.png',
-        AppTheme.Colors.purple_f8),
+        AppTheme.Colors.purple_f8,
+        false),
 
     OnboardingPage("Standings",
-        "Lorem ipsum Lorem ipsum bla bla bla",
+        "All Soccer Scores & Live Results",
         AppTheme.Decorations.nelsonGradient, 'assets/ic_trophy.png',
-        AppTheme.Colors.yellow_34),
+        AppTheme.Colors.yellow_34,
+        false),
 
     OnboardingPage("Odds",
-        "Lorem ipsum Lorem ipsum",
+        "All Soccer Scores & Live Results",
         AppTheme.Decorations.reefGradient, 'assets/ic_bet.png',
-        AppTheme.Colors.lime),
+        AppTheme.Colors.lime,
+        true),
   ];
 
   @override
   Widget build(BuildContext context) {
-
-    print("BUILD");
-
-    Widget buttonOk;
-    //if(currentPageIndex==_pages.length){
-      buttonOk = getButtonOkWidget();
-    //}
 
     return new Scaffold(
       body: new IconTheme(
@@ -84,26 +80,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
             ),
-            buttonOk
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget getButtonOkWidget(){
-    return Positioned(
-      bottom: 0.0,
-      right: 0.0,
-      child: new Container(
-        padding: const EdgeInsets.all(30.0),
-        child: Text(
-          "OK",
-          style: new TextStyle(
-              fontSize: 15.0,
-              color: Colors.white,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w400),
         ),
       ),
     );

@@ -48,6 +48,13 @@ class TextStyles {
       fontWeight: FontWeight.w400
   );
 
+  static const TextStyle onboardingButtonOK = const TextStyle(
+      fontSize: 15.0,
+      color: Colors.white,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w400
+  );
+
   static const TextStyle leagueName = const TextStyle(
       color: Colors.grey_c7,
       fontFamily: 'Poppins',
