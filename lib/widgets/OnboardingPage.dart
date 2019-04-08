@@ -22,8 +22,8 @@ class OnboardingPage extends StatelessWidget {
             children: <Widget>[
               Stack(alignment: AlignmentDirectional(0, 0), children: <Widget>[
                 Container(
-                    width: 120.0,
-                    height: 120.0,
+                    width: 110.0,
+                    height: 110.0,
                     decoration: new BoxDecoration(
                       boxShadow: [
                         BoxShadow(
@@ -37,7 +37,7 @@ class OnboardingPage extends StatelessWidget {
                       shape: BoxShape.circle,
                       color: this.iconBackgroundColor,
                     )),
-                Image.asset(this.iconPath, width: 80, height: 80),
+                Image.asset(this.iconPath, width: 70, height: 70),
               ]),
               Column(children: <Widget>[
                 Text(
